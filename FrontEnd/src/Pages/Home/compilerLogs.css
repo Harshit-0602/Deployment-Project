@@ -1,0 +1,164 @@
+/* General Page Styling */
+.compiler-logs-page {
+  background-color: #1e1e1e; /* Dark terminal-like background */
+  color: #c9c9c9; /* Light text */
+  font-family: "Courier New", Courier, monospace; /* Terminal-like font */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Terminal Header */
+.terminal-header {
+  width: 100%;
+  max-width: 1000px; /* Wider terminal */
+  background-color: #2b2b2b;
+  padding: 10px 20px;
+  border-radius: 8px 8px 0 0; /* Rounded top corners */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #444; /* Added a border for a more cohesive look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.button.red {
+  background-color: #ff5f56;
+}
+
+.button.yellow {
+  background-color: #ffbd2e;
+}
+
+.button.green {
+  background-color: #27c93f;
+}
+
+.terminal-title {
+  font-size: 1rem; /* Reverted back to previous size */
+  color: #c9c9c9;
+  margin: 0;
+  font-weight: bold; /* Make it stand out more */
+  text-align: center; /* Centered title for better alignment */
+}
+
+/* Terminal Body */
+.terminal-body {
+  width: 100%;
+  max-width: 1000px; /* Wider terminal */
+  height: 500px; /* Taller terminal */
+  background-color: #000000;
+  padding: 20px;
+  overflow-y: auto;
+  border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
+}
+
+.log-item {
+  margin: 10px 0;
+  font-size: 1rem; /* Default size for logs */
+  color: #c9c9c9;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.error-message {
+  color: #ff6666; /* Red color for error messages */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Status Bar */
+.status-bar {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #c9c9c9;
+}
+
+.loading-message {
+  color: #ffcc00;
+}
+
+.success-message {
+  color: #66ff66;
+}
+
+.error-message {
+  color: #ff6666;
+}
+
+/* Deployed Link and Deployment Failed message styling */
+.deployed-link {
+  margin-top: 20px;
+  background-color: #2b2b2b;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Error message inside deployed link area */
+.deployed-link p {
+  margin: 0;
+  color: #ff6666; /* Red for deployment failure */
+  font-size: 1.2rem;
+}
+
+.deployed-link a {
+  display: inline-block;
+  margin-top: 5px;
+  color: #66ff66;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.deployed-link a:hover {
+  color: #33cc33; /* Brighter green on hover */
+}
+
+/* Error messages */
+.error-messages {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.error-messages ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.error-messages li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+

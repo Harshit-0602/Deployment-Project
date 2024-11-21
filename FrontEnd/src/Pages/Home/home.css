@@ -1,0 +1,213 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Home Page Container */
+.home-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, #121212, #2c2c2c);
+  color: #e0e0e0;
+  padding: 20px;
+}
+
+/* Left Section (Deployed Projects) */
+.left-section {
+  width: 40%;
+  height: 100%;
+  background-color: #2b2b2b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #444444 #222222;
+}
+
+/* Styling for custom scrollbar */
+.left-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.left-section::-webkit-scrollbar-track {
+  background-color: #222222;
+}
+
+.left-section::-webkit-scrollbar-thumb {
+  background-color: #444444;
+  border-radius: 10px;
+}
+
+.left-section h2 {
+  color: #e6b800;
+  margin-bottom: 20px;
+  text-align: center; /* Center the heading */
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-item {
+  background-color: #333333;
+  padding: 15px;
+  border-radius: 5px;
+  color: #f0f0f0;
+}
+
+.project-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px; /* Add margin to create space between project name and link */
+}
+
+/* Styling for project name link */
+.project-item a {
+  color: #e6b800;
+  text-decoration: none;
+  font-size: 1rem;
+  white-space: normal; /* Allow wrapping */
+  word-wrap: break-word; /* Break long words */
+  overflow-wrap: break-word; /* Ensure long words break and wrap to the next line */
+  max-width: 100%; /* Ensure link does not stretch beyond container */
+  display: block; /* Ensure link takes up full width */
+  margin-bottom: 10px; /* Add margin between the link and delete button */
+}
+
+.project-item button {
+  background-color: #cc0000;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  font-size: small;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.project-item button:hover {
+  background-color: #990000;
+}
+
+/* Divider between Sections */
+.divider {
+  width: 1px;
+  background-color: #444444;
+  height: 100%;
+  margin: 0 20px;
+}
+
+/* Right Section (Deploy New Project) */
+.right-section {
+  width: 60%;
+  height: 100%;
+  background-color: #2b2b2b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-section h2 {
+  color: #e6b800;
+  margin-bottom: 30px;
+  text-align: center; /* Center the heading */
+}
+
+/* Larger Form Container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap for better spacing */
+  width: 100%;
+  max-width: 700px; /* Increased width */
+  margin: 0 auto; /* Center the form */
+}
+
+.form-container input {
+  padding: 20px; /* Increased padding for a larger input */
+  border: solid 2px #444444;
+  border-radius: 5px;
+  color: #ffffff;
+  background: #2b2b2b;
+  outline: none;
+  font-size: 1.2rem; /* Increased font size */
+}
+
+.form-container input:focus {
+  border-color: #e6b800;
+  background-color: #333333;
+}
+
+/* Dropdown for Framework Preset */
+.framework-select {
+  padding: 15px;
+  border: solid 2px #444444;
+  border-radius: 5px;
+  background-color: #2b2b2b;
+  color: #ffffff;
+  font-size: 1.2rem;
+  outline: none;
+  width: 100%;
+}
+
+.framework-select:focus {
+  border-color: #e6b800;
+  background-color: #333333;
+}
+
+.form-container button {
+  width: 100%;
+  height: 70px; /* Increased height for a larger button */
+  background-color: #e6b800;
+  border: none;
+  border-radius: 5px;
+  color: #121212;
+  font-size: 1.5rem; /* Increased font size */
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #cc9900;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+  }
+
+  .left-section, .right-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .form-container input, .form-container button {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container input, .form-container button {
+    font-size: smaller;
+  }
+
+  .right-section h2 {
+    font-size: large;
+  }
+}

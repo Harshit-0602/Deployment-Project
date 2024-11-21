@@ -1,0 +1,175 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Entrance Section */
+.entrance {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, #121212, #2c2c2c);
+  color: #e0e0e0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+/* Welcome Section */
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem; /* Adjusted for two-line text */
+  padding: 20px;
+  line-height: 1.4; /* Adjust line height to prevent overlap */
+}
+
+.welcome h1 {
+  padding: 30px;
+  color: #f0f0f0;
+  line-height: 1.3;
+  font-size: 3rem; /* Adjusted font size */
+  white-space: pre-wrap; /* Allow line breaks */
+}
+
+.welcome h1 span {
+  color: #e6b800;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Register/Login Section */
+.Register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login Form Styling */
+.login {
+  width: 50%;
+  height: auto;
+  padding: 20px;
+  border: solid 1px #333333;
+  border-radius: 10px;
+  background: #1e1e1e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.login > h1 {
+  margin-bottom: 15px;
+  font-size: x-large;
+  color: #e6b800;
+  text-transform: uppercase;
+}
+
+/* Input Fields */
+.Email {
+  width: 100%;
+}
+
+.Email > input {
+  padding: 10px;
+  width: 100%;
+  border: solid 2px #444444;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: large;
+  background: #2b2b2b;
+  outline: none;
+}
+
+.Email > input:focus {
+  border-color: #e6b800;
+  background-color: #333333;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  height: 50px;
+  background-color: #e6b800;
+  border: none;
+  border-radius: 5px;
+  color: #121212;
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #cc9900;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+button span {
+  transition: padding-left 0.5s ease;
+}
+
+button:hover span {
+  padding-left: 10px;
+}
+
+/* Redirect Links */
+.redirectText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.redirect {
+  color: #e6b800;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.redirect:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .entrance {
+    grid-template-columns: 1fr;
+  }
+
+  .login {
+    width: 80%;
+  }
+
+  .welcome {
+    font-size: 1.5rem; /* Adjusted for smaller screens */
+    padding: 10px;
+  }
+
+  .welcome h1 {
+    font-size: 2.5rem; /* Adjusted font size */
+  }
+
+  .Email > input,
+  button {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 480px) {
+  .login {
+    width: 90%;
+  }
+
+  .welcome h1 {
+    font-size: 2rem; /* Adjusted font size */
+  }
+}
