@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Project from "./Project"; // Importing the Project component
-import Alert from "../Utils/Alert"; // Import the common Alert component
+import Project from "./Project";
+import Alert from "./Alert";// Importing the Project component
+ // Import the common Alert component
 import axios from "axios"; // Import axios for making API calls
 import "./home.css";
 

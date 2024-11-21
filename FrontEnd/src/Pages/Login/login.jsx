@@ -2,8 +2,8 @@ import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./login.css";
-import Alert from "../Utils/Alert"; // Import the Alert component
-
+// import Alert from "../Utils/Alert"; // Import the Alert component
+import Alert from "../Home/Alert";
 // Component for Input Fields
 const Field = ({ f, setter }) => {
   return (
